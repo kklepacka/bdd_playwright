@@ -13,5 +13,6 @@ first_arg="\"$1\""
 # Shift the first argument
 shift
 
+echo ">>> $first_arg $@"
 # Pass the first argument (quoted) along with the rest to npx
 /usr/bin/npx playwright test "$first_arg" "$@"
