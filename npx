@@ -11,4 +11,4 @@ shift
 echo "$@"
 
 # Call the npx command with the remaining arguments
-/usr/bin/npx playwright test "$@" -c bdd_playwright/playwright.conf.js
+/usr/bin/npx playwright test "$@" -c bdd_playwright/playwright.config.js
