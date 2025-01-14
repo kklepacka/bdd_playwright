@@ -8,7 +8,7 @@ shift
 shift
 
 # Extract the first argument and quote it
-first_arg="\"$1\""
+first_arg="$1"
 
 prefix="--grep="
 suffix="${first_arg#--grep=}"
