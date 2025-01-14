@@ -10,9 +10,15 @@ shift
 # Extract the first argument and quote it
 first_arg="\"$1\""
 
+prefix="--grep="
+suffix="${first_arg#--grep=}"
+
+# Combine prefix with quoted suffix
+quoted_first_arg="${prefix}\"${suffix}\""
+
 # Shift the first argument
 shift
 
-echo ">>> $first_arg $@"
+echo ">>> $quoted_first_arg $@"
 # Pass the first argument (quoted) along with the rest to npx
-/usr/bin/npx playwright test "$first_arg" "$@"
+/usr/bin/npx playwright test "$quoted_first_arg" "$@"
