@@ -7,8 +7,11 @@ shift
 shift
 shift
 
-# Print the remaining arguments
-echo "$@"
+# Extract the first argument and quote it
+first_arg="\"$1\""
 
-# Call the npx command with the remaining arguments
-/usr/bin/npx playwright test "$@"
+# Shift the first argument
+shift
+
+# Pass the first argument (quoted) along with the rest to npx
+/usr/bin/npx playwright test "$first_arg" "$@"
