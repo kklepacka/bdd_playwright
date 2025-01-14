@@ -14,7 +14,7 @@ prefix="--grep="
 suffix="${first_arg#--grep=}"
 
 # Combine prefix with quoted suffix
-quoted_first_arg="${prefix}\"${suffix}\""
+quoted_first_arg="${prefix}'${suffix}'"
 
 # Shift the first argument
 shift
