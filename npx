@@ -1,2 +1,14 @@
-<testsuites id="" name="" tests="0" failures="0" skipped="0" errors="0" time="0.00013399999999990085">
-</testsuites>
+#!/bin/bash
+
+echo "npx personnalisé"
+
+# Shift the first three arguments
+shift
+shift
+shift
+
+# Print the remaining arguments
+echo "$@"
+
+# Call the npx command with the remaining arguments
+/usr/bin/npx playwright test "$@"
