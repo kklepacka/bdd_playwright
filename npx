@@ -20,6 +20,7 @@ quoted_first_arg="${prefix}'${suffix}'"
 shift
 
 echo ">>> $quoted_first_arg $@"
+export PLAYWRIGHT_JUNIT_OUTPUT_NAME="../$PLAYWRIGHT_JUNIT_OUTPUT_NAME"
 
 eval "/usr/bin/npx playwright test $quoted_first_arg $@"
 ls -ltR
