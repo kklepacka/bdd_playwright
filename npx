@@ -22,6 +22,7 @@ shift
 echo ">>> $quoted_first_arg $@"
 
 eval "/usr/bin/npx playwright test $quoted_first_arg $@"
+ls -ltR
 # args=("$quoted_first_arg" "$@")
 
 # Call the npx script with the arguments
